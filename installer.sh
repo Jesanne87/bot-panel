@@ -1,7 +1,7 @@
 #!/bin/bash
 clear
 ipes=$(curl -sS ipv4.icanhazip.com)
-surat=$(curl -sS https://raw.githubusercontent.com/msi8888/allow/main/ipmini | grep -w $ipes | awk '{print $4}')
+surat=$(curl -sS https://raw.githubusercontent.com/msi8888/allow/main/ipmini | grep "$ipes" )
 red() { echo -e "\\033[31;1m${*}\\033[0m"; }
 if [[ "$surat" = "true" ]]; then
   echo -ne
