@@ -3,12 +3,12 @@ clear
 ipes=$(curl -sS ipv4.icanhazip.com)
 surat=$(curl -sS https://raw.githubusercontent.com/msi8888/allow/main/ipmini | grep "$ipes" )
 red() { echo -e "\\033[31;1m${*}\\033[0m"; }
-if [[ "$surat" = "true" ]]; then
-  echo -ne
-else
-  red "You cant use this bot panel !"
-  exit 0
-fi
+#if [[ "$surat" = "true" ]]; then
+#  echo -ne
+#else
+#  red "You cant use this bot panel !"
+#  exit 0
+#fi
 
 [[ ! -f /usr/bin/jq ]] && {
   red "Downloading jq file!"
